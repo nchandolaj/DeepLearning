@@ -1,14 +1,15 @@
 # Statistics, Machine Learning, and Deep Learning
-Statistics, Machine Learning, and Deep Learning are interconnected disciplines that enable us to learn from data and make predictions.
-* **Statistics** forms the foundation and providing the theoretical principles for data analysis and inference.
+Statistics, Machine Learning (ML), and Deep Learning (DL) are interconnected disciplines that enable us to learn from data and make predictions.
+* **Statistics** is the foundational mathemetical framework for ML amd DL. It providing the theoretical principles for data analysis and inference.
 * **Machine Learning** applies statistical methods to create algorithms that learn from data to make predictions.
 * **Deep Learning** represents a specific and powerful set of machine learning techniques that use deep neural networks.
-  
+
 ## Statistics: The Foundation of Data Interpretation
 Its the discipline of collecting, analyzing, interpreting, and presenting data. In the context of Deep Learning, Statistics is the mathematical language of describing data and studying its properties.
 * **Descriptive Statistics**: Measure and describe data, e.g., mean, median, standard deviation, etc. Purpose: Help understand data and identify patterns and anomalies.
 * **Inferential Statistics**: Make predictions on large data population from a smaller sample of data. Purpose: Generalize the findings of a model to new, unseen data.
 * **Probability Theory**: Use concepts like prboability distribution, conditional probability, and Baye's Theorem for Machine Learning & Deep Learning algorithms. Purpose: Model and reason about uncertainity.
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/68754beb-e8e2-4911-9fa4-157fbc70ad44" />
 
 ## Machine Learning: Learning from Data
 Machine Learning (ML) is a subset of Artificial Intelligence (AI). It leverages statistical concepts to build predictive models. 
@@ -19,12 +20,14 @@ ML algorithms learn patterns from data and make predictions on new data. They im
   - **Supervised Learning**: Algorithms learn from labeled data (aka ground truth). 
   - **Unsupervised Learning**: Algorithms learn from unlabeled data, discovering hidden patterns or structure on its own.
   - **Reinforcement Learning**: Agent learns to make decisions by performing actions in an environment and receving rewards or penalties.
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/7cbda13f-91a8-4640-bf69-0d1928d97bf2" />
 
 ## Deep Learning: Advanced Pattern Recognition
 Deep Learning (DL) is a subfield of Machine Learning that utilizes artificial neural networks (many layers deep) to learn intricate patterns from large datasets. It can solve more complex problems, provided there is enough data and computational power. Deep learning network characteristics include:
 * **Artificial Neural Networks**: Deep learning models composed of interconnected nodes ('neurons' or perceptions) organized in layers. Each connection has parameters (weights, biases) that are adjusted during training.
 * **Hierarchical Feature Learning**: Deep learning automatically learn hierarchical representations of data. For example, in image recognition, initial layers learn to detect simple features (edges and corners), while subsequent layers learn to recognize more complex patterns likes eyes and faces. This automated feature extraction reduces the need for manual feature engineering that is often required in traditional ML.
 * **Handling Unstructured Data**: DL process unstructured data like images, sound, and text, which are difficult to handle for traditional ML.
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/9e786692-4ee4-410a-9e80-1956d33cd6f7" />
 
 ## Data and Models
 **Data**: We require data to analyze, learn from, and make predictions about. The quality, quantity, and relevance of data are paramount.
@@ -32,6 +35,11 @@ Deep Learning (DL) is a subfield of Machine Learning that utilizes artificial ne
 * In **statistics**, a model is often used to understand the relationship between variables and to make inferences about a population.
 * In **machine learning**, a model is the output of a training process. It's an algortihm that has learned from data and can be used to make predictions on new data.
 * In **deep learning**, the model is a deep neural network along with its learned parameters (weights and biases). They are complex and considered "black boxes" due to the difficult interpretability.
-
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/5e251c66-b4ef-4030-9713-549e3d35d4ad" />
 Essentially, **data** is used to traing a **model** that can generalize well to new, unseen data, whether for understanding, prediction, or generation.
+
+## Artifical Intelligence: A quick summary for completeness
+Artificial Intelligence (AI) is the all-encompassing field fcused on building systems or machines that can perform tasks that typically require human intelligence. It is not a single technology but a collection of methodologies and approaches, some of which are not "learned" from data but are explicitly programmed rules and logic (often called "Symbolic AI").
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/a19e2ee2-77fe-415a-b5e9-1dc8b13e32e4" />
+
 
