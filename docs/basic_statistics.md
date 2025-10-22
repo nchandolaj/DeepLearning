@@ -40,4 +40,7 @@
 * In the continuous case, $P : \mathbb{R} \to \mathbb{R}$
 * 'P' is called a **probability distribution**
 
-
+**Three types of distribution**
+1. **Data generating**: It lives in the real world, e.g., the weather data. 
+2. **Empirical**: Samples of the real data that we observe, e.g., weather measurements of the samples from the weather. 
+3. **Model**: If 
