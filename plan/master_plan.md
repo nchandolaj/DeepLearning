@@ -13,10 +13,7 @@ This roadmap is designed to build a rock-solid foundation in Deep Learning mecha
 | Week | Focus | Concepts | Project & Dataset | Resources |
 | :--- | :--- | :--- | :--- | :--- |
 | **1** | **The Neural Circuit** | Perceptrons, Backpropagation, Activation Functions (ReLU, Sigmoid), Loss Functions (MSE, Cross-Entropy). | **"Build a Neural Net from Scratch"**<br>_Task:_ Implement a Multi-Layer Perceptron using only NumPy (no PyTorch/TensorFlow) to classify digits.<br>_Dataset:_ [MNIST](http://yann.lecun.com/exdb/mnist/) | **Course:** Andrew Ng’s _Neural Networks and Deep Learning_ (Coursera).<br>**Read:** [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/) (Michael Nielsen) - Ch 1 & 2. |
-| **2** | **Computer Vision (CNNs)** | Convolutions, Pooling, Strides, Batch Normalization, Dropout.<br><br>
-
-[Image of CNN architecture diagram]
- | **"The Eye"**<br>_Task:_ Build a Convolutional Neural Network (CNN) to classify objects. Experiment with deeper layers vs. wider layers.<br>_Dataset:_ [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) | **Course:** Stanford CS231n (YouTube - 2017 version is still great for basics). |
+| **2** | **Computer Vision (CNNs)** | Convolutions, Pooling, Strides, Batch Normalization, Dropout.<br><br> | **"The Eye"**<br>_Task:_ Build a Convolutional Neural Network (CNN) to classify objects. Experiment with deeper layers vs. wider layers.<br>_Dataset:_ [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) | **Course:** Stanford CS231n (YouTube - 2017 version is still great for basics). |
 | **3** | **Sequences (RNNs & LSTMs)** | Recurrent Neural Networks, Vanishing Gradient Problem, LSTMs/GRUs, Sequence-to-Sequence models. | **"The Time Traveler"**<br>_Task:_ Predict the next day's stock price or classify text sentiment. Note how slow training is compared to CNNs.<br>_Dataset:_ [IMDB Movie Reviews](https://ai.stanford.edu/~amaas/data/sentiment/) | **Blog:** Colah’s Blog - _"Understanding LSTM Networks"_. |
 | **4** | **The Modern Toolkit** | PyTorch/TensorFlow Mastery, Optimizers (Adam, SGD), Learning Rate Schedulers, Data Augmentation. | **"Refinement"**<br>_Task:_ Re-write your Week 2 project using modern PyTorch/Lightning practices. Achieve >85% accuracy on CIFAR-10. | **Doc:** PyTorch "Blitz" Tutorial.<br>**Video:** Andrej Karpathy - _"Building makemore Part 1-3"_. |
 
