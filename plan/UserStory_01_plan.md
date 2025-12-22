@@ -1,11 +1,11 @@
-# Week 1: The Foundations - Neural Networks from Scratch
+# User Story 1: The Foundations - Neural Networks from Scratch
 
 **Goal:** Build a fully functional Multi-Layer Perceptron (MLP) using only NumPy (no PyTorch/TensorFlow) to classify digits.
 **Prerequisite Check:** Ensure you have Python installed with `numpy`, `matplotlib`, and `sklearn` (for data loading only).
 
 ---
 
-## Day 1: The Perceptron (The Atomic Unit)
+## Task 1: The Perceptron (The Atomic Unit)
 **Focus:** Understanding the mathematical model of a single neuron and why we need non-linearity.
 
 * **1. Concepts**
@@ -32,7 +32,7 @@
 
 ---
 
-## Day 2: The Forward Pass (Matrix Magic)
+## Task 2: The Forward Pass (Matrix Magic)
 **Focus:** Scaling from one neuron to thousands using Linear Algebra to avoid slow loops.
 
 * **1. Concepts**
@@ -54,7 +54,7 @@
 
 ---
 
-## Day 3: Activation & Loss Functions
+## Task 3: Activation & Loss Functions
 **Focus:** Adding non-linearity and defining "error" so the network can measure its performance.
 
 * **1. Concepts**
@@ -76,7 +76,7 @@
 
 ---
 
-## Day 4: The Chain Rule (Backpropagation Theory)
+## Task 4: The Chain Rule (Backpropagation Theory)
 **Focus:** Deriving the "gradient" — determining exactly how to adjust weights to reduce error.
 
 * **1. Concepts**
@@ -98,7 +98,7 @@
 
 ---
 
-## Day 5: The Optimizer (Stochastic Gradient Descent)
+## Task 5: The Optimizer (Stochastic Gradient Descent)
 **Focus:** Using the gradients calculated yesterday to actually update the network's weights.
 
 * **1. Concepts**
@@ -119,7 +119,7 @@
 
 ---
 
-## Day 6: Project Part I - Building the Engine
+## Task 6: Project Part I - Building the Engine
 **Focus:** Assembling the individual components into a clean, reusable Class structure.
 
 * **1. Concepts**
@@ -154,7 +154,7 @@
 
 ---
 
-## Day 7: Project Part II - Training on MNIST
+## Task 7: Project Part II - Training on MNIST
 **Focus:** The "Hello World" of Deep Learning — training your engine to read handwritten digits.
 
 * **1. Concepts**
