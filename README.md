@@ -6,10 +6,11 @@ This repository documents my structured progression through Deep Learning concep
 
 * **AI-Assisted Workflow:** This is an AI-first learning initiative. I leverage **Gemini** as a technical co-pilot to accelerate curriculum planning, audit code quality, and assist with debugging.
 * **Instructional Documentation:** I adopt the "Feynman Technique" for documentation. Notes and code comments are written in an instructional style, designed to explain the topic clearly as if being presented in an online course.
+* **References:** While I utilize a broad range of data sources (official docs, Books, StackOverflow, blogs, etc.), specific references are cited only when a source was critical to a unique implementation or logic.
 
 ## Curriculum Roadmap
 
-The learning path is divided into four distinct phases, moving from theoretical primitives to state-of-the-art application.
+The learning path / curriculum is structured into four distinct phases moving from theoretical primitives to state-of-the-art application. Phases can be viewed as an Agile "Epics", each containing "User Stories".
 
 ### Phase 1: Foundations
 **Focus:** Establishing the mathematical and theoretical groundwork necessary for advanced work.
