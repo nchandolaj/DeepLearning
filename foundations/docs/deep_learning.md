@@ -47,7 +47,3 @@ Once the model is trained and its weights are "frozen," it is ready for Inferenc
 | **Real-World Example** | Google training a model on billions of images. | You using Google Lens to identify a plant. |
 
 
-
----
-
-**Would you like to explore how "Backpropagation" actually changes those weights during the training phase, or should we look at different types of Deep Learning architectures like CNNs or Transformers?**
