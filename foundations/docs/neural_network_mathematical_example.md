@@ -2,6 +2,8 @@
 
 Let’s walk through a single "learning step" for a tiny neural network. We will use a computational graph approach to find out how to update a weight to reduce our error.
 
+> **Note:** This example does not include **bias** or use of an **activation function** for simplicity.
+
 ## 1. The Setup
 
 Imagine a single neuron with one input ($x$), one weight ($w$), and no bias. We use a **Squared Error** loss function.
