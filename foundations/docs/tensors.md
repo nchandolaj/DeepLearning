@@ -2,7 +2,6 @@
 
 While a **Matrix** is a 2D grid of numbers, a **Tensor** is the umbrella term for any $n$-dimensional array. In Deep Learning frameworks like PyTorch or TensorFlow, almost all data is stored as a Tensor.
 
----
 
 ## 1. The Dimensional Hierarchy (Ranks)
 The "Rank" of a tensor refers to the number of dimensions it has.
@@ -16,9 +15,6 @@ The "Rank" of a tensor refers to the number of dimensions it has.
 | **4** | **4D Tensor** | A "row" of cubes | A batch of color images (Batch, Height, Width, Channels). |
 
 
-
----
-
 ## 2. Why Tensors are Essential for Imagery
 A standard color image is a **3D Tensor**. It has a height and width (the pixels), but it also has a "depth" of 3 (Red, Green, and Blue channels).
 
@@ -27,7 +23,6 @@ A standard color image is a **3D Tensor**. It has a height and width (the pixels
 
 When you hear about "Tensor Operations," it usually refers to performing math (like addition or multiplication) across all these dimensions simultaneously.
 
----
 
 ## 3. Key Tensor Attributes
 When debugging Deep Learning code, you will constantly check three things:
@@ -36,7 +31,6 @@ When debugging Deep Learning code, you will constantly check three things:
 2.  **Rank:** The number of dimensions (for the shape above, the rank is 4).
 3.  **Data Type (dtype):** Tensors usually hold 32-bit floats (`float32`). If you try to multiply a `float32` tensor by an `int64` tensor, the code will usually crash.
 
----
 
 ## 4. Tensor Reshaping: The "Plasticity" of Data
 One of the most common matrix operations is **Reshaping**. 
@@ -78,7 +72,7 @@ print(f"Shape: {x.shape}")        # torch.Size([2, 2])
 print(f"Device: {x.device}")      # cpu or cuda:0
 ```
 
-### 2. TensorFlow (tf.Tensor)
+### 2. TensorFlow (`tf.Tensor`)
 TensorFlow (often used with Keras) is a powerhouse for production and mobile deployment.
 
 ```python
@@ -100,7 +94,7 @@ print(f"Shape: {x.shape}")        # (2, 2)
 print(f"Dtype: {x.dtype}")        # <dtype: 'int32'>
 ```
 
-### 3. JAX (jax.Array)
+### 3. JAX (`jax.Array`)
 JAX is used by DeepMind and Google Research. It uses jax.numpy (jnp) to mirror the NumPy API almost perfectly.
 
 ```python
