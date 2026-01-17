@@ -1,11 +1,10 @@
 # Non-Linear Layers
 
-## 1. What are Non-Linear Layers?
-A non-linear layer is a function applied element-wise to the output of a linear transformation. Its job is to introduce "curvature" into the model's logic. 
+A **non-linear layer** is a function applied element-wise to the output of a linear transformation. Its job is to introduce "curvature" into the model's logic. 
 
 Without these, a neural network is just a giant linear regression model—it could only ever draw straight lines. With them, it can learn to recognize shapes, human faces, and the nuances of language.
 
-## 2. Types
+**on-Linear Operations discussed below:**
 * Activation Functions
 * Other Non-Linear Operations
   - Normalization,
