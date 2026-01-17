@@ -74,20 +74,29 @@ While they are all mathematically non-linear, their "reason for being" differs s
 
 ## 2. Deep Dive into the "Different" Non-Linearities
 
+
 ### Normalization Layers (The Stabilizers)
+
 Layers like **BatchNorm** or **LayerNorm** are non-linear because they involve calculating the standard deviation ($\sigma$), which requires a square root and a division.
+
 $$\hat{x} = \frac{x - E[x]}{\sqrt{Var[x] + \epsilon}}$$
+
 * **How it differs:** Unlike ReLU, which changes the *shape* of the data's logic, Normalization changes the *scale*. It ensures that no single "neuron" becomes so loud that it drowns out the others.
 
 
 ### Pooling Layers (The Summarizers)
+
 **Max Pooling** is a strict non-linearity (the $\max$ function). 
+
 * **How it differs:** Its purpose is **spatial compression**. It tells the network: "I don't care exactly *where* the cat's ear is in these 4 pixels, just tell me if there *is* an ear." It throws away information to make the model more robust.
 
 
 ### Attention (The Focuser)
+
 Attention is perhaps the most powerful non-linearity in modern AI (the "T" in GPT stands for Transformer, which is built on this). 
+
 * **How it differs:** While ReLU is "static" (it always does the same thing to the same number), Attention is **dynamic**. It calculates how much one word (or pixel) should "pay attention" to another. The non-linearity comes from the **Softmax** operation and the multiplication of two learned vectors.
+
 $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
 
 
