@@ -1,11 +1,5 @@
 # Deep Networks
 
-A **Deep Network** is 
-* A really BIG differentiable function `o = f(x)`
-* Stacks layers of "simple" functions
-  - Computation Graph
-* Trained with `gradient descent` and automated differentiation (`backpropagation`)
-
 In the context of AI, **Deep Networks** (specifically Deep Neural Networks or DNNs) are the engines behind almost every modern breakthrough you see today—from generative AI like ChatGPT to self-driving cars.
 
 At their core, they are a type of **Machine Learning** architecture inspired by the biological structure of the human brain. They consist of layers of interconnected "neurons" that process information in a hierarchy, allowing the computer to learn from data without being explicitly programmed for every specific task.
@@ -55,4 +49,58 @@ While neural networks have existed since the 1950s, three things made them "expl
 | **Human Effort** | Requires manual feature engineering | Automatically discovers features |
 
 ---
+
+# Deep Networks from a Mathematical Perspective
+
+A **Deep Network** is 
+* A really BIG differentiable function `o = f(x)`
+* Stacks layers of "simple" functions
+  - Computation Graph
+* Trained with `gradient descent` and automated differentiation (`backpropagation`)
+
+To understand a Deep Network mathematically, it is helpful to step away from the biological metaphor of "neurons" and instead view it as a **massive, nested, composite function**.
+
+From this perspective, a deep network is a high-dimensional mapping $F: \mathbb{R}^n \to \mathbb{R}^m$ that transforms an input vector $x$ into an output vector $y$ through a sequence of differentiable operations.
+
+## 1. The Network as Function Composition
+At its core, a deep network is the **composition** of many simpler functions, which we call "layers." If a network has $L$ layers, the entire model can be written as:
+
+$$F(x; \theta) = f_L(f_{L-1}(...f_2(f_1(x; \theta_1); \theta_2)...); \theta_L)$$
+
+Where:
+* $x$ is the input data.
+* $f_l$ is the function representing the $l$-th layer.
+* $\theta = \{\theta_1, \theta_2, \dots, \theta_L\}$ represents the set of all trainable parameters (weights and biases).
+
+## 2. Anatomy of a Single Layer
+Each individual function $f_l$ is typically an **affine transformation** followed by a **non-linear activation function**. For a single layer, the operation is:
+
+$$a^{(l)} = \sigma(W^{(l)} a^{(l-1)} + b^{(l)})$$
+
+Breaking this down:
+1.  **Linear Part ($W^{(l)} a^{(l-1)} + b^{(l)}$):** A matrix multiplication that rotates and scales the data in high-dimensional space.
+2.  **Non-linear Part ($\sigma$):** A function like **ReLU** ($\max(0, x)$) or **Sigmoid**. Without this non-linearity, the entire "big" function would collapse into a single linear transformation, regardless of how many layers you add.
+
+## 3. Why "Differentiable" Matters
+The "secret sauce" of AI is that $F$ is a **differentiable function**. This means we can calculate exactly how much a tiny change in any single parameter (weight) affects the final output.
+
+We define a **Loss Function** $\mathcal{L}(F(x; \theta), y_{true})$, which measures the error. Because $F$ is a chain of differentiable functions, we can use the **Chain Rule** from calculus to propagate the error backward from the output to every single weight in the network.
+
+This process is known as **Backpropagation**:
+$$\frac{\partial \mathcal{L}}{\partial \theta} = \frac{\partial \mathcal{L}}{\partial f_L} \cdot \frac{\partial f_L}{\partial f_{L-1}} \cdot \dots \cdot \frac{\partial f_2}{\partial f_1} \cdot \frac{\partial f_1}{\partial \theta}$$
+
+## 4. The "BIG" Part: High-Dimensional Manifolds
+When we say it is a "BIG" function, we are referring to the scale:
+* **Input Space:** An image might be a vector in $\mathbb{R}^{784}$ (for $28 \times 28$ pixels) or $\mathbb{R}^{1,000,000}$ for high-res photos.
+* **Parameter Space:** Modern models (like GPT-4 or those in 2026) have $\theta$ vectors with **billions or trillions** of components.
+* **Universal Approximation:** Mathematically, a deep network is a **Universal Approximator**. This means that with enough parameters and the right configuration, it can approximate *any* continuous function to an arbitrary degree of accuracy.
+
+## Summary: The Mathematical Workflow
+1.  **Forward Pass:** Compute the composite function $y = F(x; \theta)$.
+2.  **Loss Evaluation:** Quantify the error using $\mathcal{L}$.
+3.  **Optimization:** Use the gradient $\nabla_\theta \mathcal{L}$ to update the parameters:
+    $$\theta_{new} = \theta_{old} - \eta \nabla_\theta \mathcal{L}$$
+    *(Where $\eta$ is the learning rate.)*
+
+By repeating this billions of times, the "BIG function" slowly warps its internal surface to perfectly map inputs to the desired outputs.
 
