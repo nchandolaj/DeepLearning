@@ -4,7 +4,7 @@ A **non-linear layer** is a function applied element-wise to the output of a lin
 
 Without these, a neural network is just a giant linear regression model—it could only ever draw straight lines. With them, it can learn to recognize shapes, human faces, and the nuances of language.
 
-**on-Linear Operations discussed below:**
+**Non-Linear Operations discussed below:**
 * Activation Functions
 * Other Non-Linear Operations
   - Normalization,
