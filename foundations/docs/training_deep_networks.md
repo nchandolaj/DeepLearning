@@ -10,9 +10,12 @@ Training Deep Networks have **three major components:**
 
 ```mermaid
 graph TD;
-    ContinuousLabels? --> Regression;
-    ContinuousLabels? --> Classification;
-    Regression --> L1Loss,MSELoss;
-    Classification --> TwoClasses:BCEWithLogitsLoss;
-    Classification --> MoreThanTwoClasses:CrossEntropyLoss;
+    id_1(Continuous Labels ?) --> id_2a(Regression);
+    id_1 --> id_2b(Classification);
+    id_1 --> id_2c(Image / Word-Embeddings);
+    id_2a --> id_2a1(L1Loss, MSELoss);
+    id_2b --> id_2b1(Two Classes: BCEWithLogitsLoss);
+    id_2b --> id_2b2(More Than Two Classes: CrossEntropyLoss);
+    id_2c --> id_2c1(CrossEntropy or  Specialized Losses);
 ```
+
