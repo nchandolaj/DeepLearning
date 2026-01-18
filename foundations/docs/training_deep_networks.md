@@ -99,6 +99,28 @@ Finally, move the weights in the direction of momentum, scaled by the variance.
 
 $$\theta_t \leftarrow \theta_t - \alpha \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}$$
 
+### Algorithm
+
+m, v, t = 0, 0, 1
+
+for epoch in range(n):
+
+  for (x, y) in dataset:
+
+    J = $\nabla$l($\theta$|x,y)
+  
+    m = (1 - $\beta_1$) * J + $\beta_1$ * m
+
+    v = $\beta_2$ * v + (1 - $\beta_2$) * J.square()
+
+    m = m / (1 - $\beta_1$^t)
+
+    v = v / (1 - $\beta_2$^t)
+
+    $\theta$ = $\theta$ - $\epsilon$ * (m / v.sqrt() + decay * 0) 
+  
+    t += 1
+
 ---
 
 ### Why AdamW?
