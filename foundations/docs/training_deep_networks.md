@@ -125,21 +125,21 @@ for epoch in range(n):
 * Adam is special because the optimizer itself also has parameters. The optimizer has **more parameters** than the model has.
   - if model has **n** parameters, AdamW add **2n** parameters, and the gradient itself has **n** values in it.
   - e.g., if model has 100,000 paramaters, AdamW adds 200,000 parameters to this 100,000 model parameters, and the Gradient adds 100,000 parameters.
-  - **Overall, Adam/AdamW will have four floating point values per parameter.** *This become a problem with training very large models.*
+  - **Overall, Adam/AdamW will have four floating point values per parameter.** *This becomes a problem when training very large models.*
 * The additional parameters are to keep track of the **first momentum term** - `m` and a **second momentum term** - `v`
-  - `m, v, t = 0, 0, 1 `
+  - m, v, t = 0, 0, 1 
 * 'J' is the `Gradient`
-  - `J = $\nabla$ l ($\theta$ | x, y)`.
+  - J = $\nabla$ l ($\theta$ | x, y)
 * `m` is the weighted average of past gradients
-  - `m = (1 - $\beta_1$) * J + $\beta_1$ * m`
+  - m = (1 - $\beta_1$) * J + $\beta_1$ * m
 * `v` is the weighted average of the square of the gradient (i.e. the magnitude of the gradient).
-  - `v = $\beta_2$ * v + (1 - $\beta_2$) * J.square()`
-* The weighted average are normalized in the folowing two lines in the algorithm to ensure that the weighted averages doesn't start out as zero.
-  - `m = m / (1 - $\beta_1$^t)`
-  - `v = v / (1 - $\beta_2$^t)`
+  - v = $\beta_2$ * v + (1 - $\beta_2$) * J.square()
+* The weighted average are normalized in the folowing two lines in the algorithm to ensure that **the weighted averages doesn't start out as zero**.
+  - m = m / (1 - $\beta_1$^t)
+  - v = v / (1 - $\beta_2$^t)
 * Take a gradient step in the direction of this accumulated gradient and normalize it by the magnitude of this gradient - `v.sqrt()`
-  - `$\theta$ = $\theta$ - $\epsilon$ * (m / v.sqrt() + decay * $\theta$ )`
-  - Sometime for AdamW, there is **weight decay term** to ensure the weights don't grow unbounded.
+  - $\theta$ = $\theta$ - $\epsilon$ * (m / v.sqrt() + decay * $\theta$ )
+  - Sometime for AdamW, there is **weight decay term** to ensure **the weights don't grow unbounded**.
 
 ---
 
