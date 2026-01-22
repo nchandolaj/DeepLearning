@@ -15,6 +15,40 @@ For example, if we have a simple function $f(x, y, z) = (x + y) \times z$, the g
 
 **Why use this?** In Deep Learning, functions are too complex to solve all at once. By breaking them into a graph, the computer can calculate derivatives (slopes) one small step at a time using the **Chain Rule** from calculus.
 
+### An Example 
+
+Diagram below visually explains a **computational graph** as used in deep learning, showing **forward computation**, **parameters**, and **where gradients flow during backpropagation.**
+
+```mermaid
+flowchart LR
+    %% Inputs
+    X((Input x))
+    W((Weight W))
+    b((Bias b))
+
+    %% Linear operation
+    M((MatMul))
+    A1((Add))
+
+    %% Activation
+    F((Activation<br/>Function))
+
+    %% Loss
+    Yh((Prediction ŷ))
+    Y((Target y))
+    L((Loss<br/>Function))
+
+    %% Forward pass
+    X --> M
+    W --> M
+    M --> A1
+    b --> A1
+    A1 --> F
+    F --> Yh
+    Yh --> L
+    Y --> L
+```
+
 ## 2. What is Backpropagation?
 
 **Backpropagation** (short for "backward propagation of errors") is the algorithm used to calculate the **gradient** of the loss function with respect to the weights in the network. 
