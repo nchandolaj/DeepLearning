@@ -12,6 +12,8 @@ Training Deep Networks have **three major components:**
 
 The Loss Function $\mathcal{L}$ is the mathematical formula that calculates "how wrong" the model is.
 
+For most modern deep networks (classification tasks like identifying cats vs. dogs), we use **Cross-Entropy Loss**.
+
 Types of Loss Functions commonly used:
 
 ```mermaid
@@ -56,6 +58,16 @@ The training algorithm repeats the following cycle (often millions of times) unt
 3.  **Loss Calculation:** Compare predictions to truth using $\mathcal{L}$.
 4.  **Backward Pass (Backprop):** Calculate the gradient $\nabla_\theta \mathcal{L}$. This tells us the *direction* to move each weight to reduce the error.
 5.  **Optimizer Step (AdamW):** Update the weights using the calculated gradients.
+
+```mermaid
+flowchart LR
+    A[Sample Batch<br/>Select 32 samples] --> B[Forward Pass<br/>Compute predictions]
+    B --> C[Loss Calculation<br/>Compare prediction vs truth]
+    C --> D[Backward Pass<br/>Compute gradients]
+    D --> E[Optimizer Step<br/>AdamW updates weights]
+
+    E --> A
+```
 
 ---
 
@@ -130,9 +142,9 @@ for epoch in range(n):
   - m, v, t = 0, 0, 1 
 * 'J' is the `Gradient`
   - J = $\nabla$ l ($\theta$ | x, y)
-* `m` is the weighted average of past gradients
+* `m` is the weighted average of past gradients, and $\beta_1$ is a `decay rate`, usually 0.9 .
   - m = (1 - $\beta_1$) * J + $\beta_1$ * m
-* `v` is the weighted average of the square of the gradient (i.e. the magnitude of the gradient).
+* `v` is the weighted average of the square of the gradient (i.e. the magnitude of the gradient), and $\beta_2$ is a `decay rate`, usually 0.999 .
   - v = $\beta_2$ * v + (1 - $\beta_2$) * J.square()
 * The weighted average are normalized in the folowing two lines in the algorithm to ensure that **the weighted averages doesn't start out as zero**.
   - m = m / (1 - $\beta_1$^t)
